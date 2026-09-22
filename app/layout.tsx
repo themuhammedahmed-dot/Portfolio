@@ -29,6 +29,8 @@ export const metadata: Metadata = {
     'API Testing',
     'Database Testing',
     'SQL',
+    'Python',
+    'Postman',
     'Jira',
     'Agile QA',
     'Scrum',

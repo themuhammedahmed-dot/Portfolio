@@ -63,9 +63,13 @@ const qaSkills = [
   'Requirement Validation',
   'Regression Suites',
   'RBAC Testing',
+  'API Testing',
+  'Request/Response Validation',
+  'JSON Validation',
 ];
 
 const tools = [
+  'Postman',
   'Jira',
   'SQL',
   'SQL Server',
@@ -73,11 +77,13 @@ const tools = [
   'SSMS',
   'Git',
   'GitHub',
-  'Postman',
-  'Chrome DevTools',
+  'Python',
+  'HTML',
+  'CSS',
+  'VS Code',
+  'Linux CLI',
   'Agile',
   'Scrum',
-  'ClickUp',
 ];
 
 const workflow = [
@@ -116,19 +122,19 @@ const workflow = [
 const projects = [
   {
     type: 'QA PROJECT',
-    title: 'Sindh Job Portal',
-    subtitle: 'Recruitment & Application Management Platform',
+    title: 'E-Commerce API & Backend Validation Suite',
+    subtitle: 'Comprehensive API & Database Testing Framework',
     description:
-      'End-to-end manual QA across recruitment workflows including applications, scrutiny, shortlisting, interview scheduling, medical screening, job offers and appointment processes.',
+      'End-to-end API testing and backend validation for a scalable e-commerce platform. Designed test cases using Postman and executed complex SQL queries to ensure data integrity and business rule enforcement.',
     highlights: [
-      'Functional & regression testing',
-      'RBAC and authorization validation',
-      'Business workflow testing',
-      'Jira defect lifecycle management',
-      'Validation and negative testing',
-      'Frontend/backend data verification',
+      'REST API testing with Postman',
+      'JSON payload and schema validation',
+      'HTTP status code and response verification',
+      'SQL-based database integrity checks',
+      'CRUD validation and backend consistency',
+      'Detailed bug reporting and documentation',
     ],
-    tags: ['Manual QA', 'Jira', 'RBAC', 'Regression', 'SQL'],
+    tags: ['API Testing', 'Postman', 'SQL', 'Backend QA'],
     featured: true,
   },
   {
@@ -151,30 +157,31 @@ const projects = [
 
 const experience = [
   {
-    role: 'Software Quality Assurance Engineer',
-    company: 'Sukkur IBA University — Sindh Job Portal',
-    period: 'Nov 2025 — Present',
+    role: 'Associate QA Engineer',
+    company: 'Spinel Sol',
+    period: '1+ Year',
     description:
-      'Perform manual software testing across a complex recruitment platform, validating business rules, user workflows, role-based access and application behavior.',
+      'Perform manual software testing across web applications, validating business rules, user workflows, and ensuring overall quality and stability.',
     bullets: [
-      'Design and execute functional, regression, smoke, UI and end-to-end test cases.',
-      'Report, track and verify defects using Jira with clear reproduction steps and expected/actual results.',
-      'Validate complex recruitment workflows including scrutiny, shortlisting, interview scheduling and job offers.',
-      'Test role-based permissions and authorization behavior across different portal accounts.',
-      'Collaborate with developers and product stakeholders during Agile ceremonies and defect resolution.',
+      'Analyze functional and business requirements to identify test scenarios and edge cases.',
+      'Design and execute test cases for functional, regression, integration, system, smoke, sanity, exploratory, and end-to-end testing.',
+      'Identify, document, and track software defects with clear reproduction steps, severity, and priority.',
+      'Conduct API testing using Postman, validating REST endpoints, HTTP status codes, and JSON data.',
+      'Perform database testing using SQL to verify backend data, integrity, and consistency.',
+      'Collaborate in Agile/Scrum activities and support successful software releases.',
     ],
   },
   {
     role: 'Data Engineering Intern',
-    company: 'NETSOL Technologies, Lahore',
+    company: 'NETSOL Technologies',
     period: 'Jun 2024 — Jul 2024',
     description:
-      'Worked with enterprise data workflows and developed practical experience in SQL, SSIS, SSMS and data migration.',
+      'Worked with SQL Server databases and supported ETL processes, performing data validation and quality checks.',
     bullets: [
-      'Worked with SSIS packages and SQL Server databases.',
-      'Performed SQL-based data validation and consistency checks.',
-      'Supported ETL and data migration activities.',
-      'Developed a stronger understanding of backend data validation and database workflows.',
+      'Performed database operations and validation using SQL Server Management Studio (SSMS).',
+      'Supported ETL processes and data migration activities using SSIS.',
+      'Performed data validation and quality checks to identify inconsistencies.',
+      'Maintained data accuracy across enterprise data workflows.',
     ],
   },
 ];
@@ -185,8 +192,8 @@ export default function Home() {
       {/* Background decoration */}
       <div className="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
         <div className="absolute left-1/2 top-0 h-[600px] w-[900px] -translate-x-1/2 rounded-full bg-accent-500/10 blur-3xl" />
-        <div className="absolute right-[-200px] top-[700px] h-[500px] w-[500px] rounded-full bg-indigo-500/10 blur-3xl" />
-        <div className="absolute left-[-200px] top-[1500px] h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-3xl" />
+        <div className="absolute right-[-200px] top-[700px] h-[500px] w-[500px] rounded-full bg-fuchsia-500/10 blur-3xl" />
+        <div className="absolute left-[-200px] top-[1500px] h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-3xl" />
       </div>
 
       {/* Navigation */}
@@ -277,7 +284,7 @@ export default function Home() {
               </div>
 
               <div className="mt-10 flex flex-wrap gap-x-5 gap-y-3 text-sm text-slate-500 dark:text-slate-400">
-                {['Manual Testing', 'Jira', 'SQL', 'Agile / Scrum', 'API Testing'].map(
+                {['Manual Testing', 'API Testing', 'SQL', 'Postman', 'Jira', 'Agile / Scrum'].map(
                   (item) => (
                     <span key={item} className="flex items-center gap-2">
                       <CheckCircle2 className="h-4 w-4 text-pass-500" />
@@ -352,9 +359,9 @@ export default function Home() {
 
                   <div className="mt-5 rounded-2xl border border-slate-200 dark:border-slate-800">
                     {[
-                      ['TC-104', 'Login validation', 'PASS'],
-                      ['TC-117', 'Role authorization', 'PASS'],
-                      ['TC-132', 'Interview workflow', 'FAIL'],
+                      ['TC-104', 'API endpoint validation', 'PASS'],
+                      ['TC-117', 'Database integrity check', 'PASS'],
+                      ['TC-132', 'Payment workflow', 'FAIL'],
                       ['TC-141', 'Notification check', 'PASS'],
                     ].map(([id, title, status]) => (
                       <div
